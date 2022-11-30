@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(example)
+file(GLOB_RECURSE files src/*)
+add_executable(example ${files})
+target_compile_options(example PUBLIC -g3 -O0 -Wall)
+target_include_directories(example PUBLIC src)
